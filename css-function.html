@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS function</title>
+    <style>
+      :root {
+        --max-width: 1000px;
+        --max-number: 100;
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        /* font-size: clamp(14px, 2vw, 40px); */
+        /* 40 / var(--max-number) * 10vw
+				최대너비값인 1000px일 때 폰트사이즈가 40px인 것을 기준으로
+				뷰포트 너비가 500px일 때(반으로 줄었을 때) 폰트도 반으로(20px) 만드는 계산 수식
+				*/
+        font-size: clamp(14px, 40 / var(--max-number) * 10vw, 40px);
+      }
+
+      .wrap {
+        background-color: royalblue;
+        /* width: var(--max-width);
+        max-width: calc(100% - 60px); */
+        width: min(var(--max-width), 100% - 60px);
+        height: 100px;
+        margin: 0 auto;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .float li {
+        background-color: seagreen;
+        float: left;
+        width: calc((100% - (24px * 2)) / 3);
+      }
+
+      .float li:not(:first-child) {
+        margin-left: 24px;
+      }
+
+      .float {
+        overflow: hidden;
+      }
+
+      .flex {
+        display: flex;
+        gap: 24px;
+      }
+
+      .flex li {
+        background-color: gold;
+        width: calc((100% - (24px * 2)) / 3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">contents</div>
+
+    <ul class="float">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+
+    <ul class="flex">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </body>
+</html>
