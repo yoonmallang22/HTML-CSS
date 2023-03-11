@@ -1,0 +1,42 @@
+h1,
+p {
+  margin: initial;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  background-image: url(images/bg.png);
+  background-repeat: no-repeat;
+  /* background-position: 0% 0%; */
+  background-size: cover;
+}
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.section {
+  background-color: #93572e;
+  background-image: url(images/green.png);
+  background-repeat: no-repeat;
+  /* background-position: 0% 0%;
+  background-size: auto auto; */
+  width: auto;
+  padding: 60px 10px 40px 20px;
+  box-sizing: border-box;
+  border-bottom: 10px solid #4a260b;
+  border-radius: 0 0 30px 30px;
+}
+
+.section h1 {
+  margin-bottom: 10px;
+}
