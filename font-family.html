@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폰트 적용</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+
+      @font-face {
+        font-family: "Pretendard-Regular";
+        /* cdn으로 폰트 사이트에서 폰트를 받아옴 */
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Pretendard-Bold";
+        /* 내가 업로드 해둔 폰트 경로를 통해 폰트를 받아옴 
+        혹시나 폰트 사이트가 문제가 생길 수도 있고, 
+        작업하는 환경이 타 사이트의 연결을 막아놓은 경우
+				폰트를 직접 연결해두는게 좋음
+				*/
+        src: url("font/Pretendard-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .black-han-sans {
+        font-family: "Black Han Sans", sans-serif;
+      }
+
+      .gugi {
+        font-family: "Gugi", cursive;
+      }
+
+      .pretendard-regular {
+        font-family: Pretendard-Regular, "Times New Roman", Dotum, "돋움",
+          sans-serif;
+        /* ""로 묶은/안묶은 폰트
+				- 한글일 경우에는 "" 사용
+				- 영문이지만 공백이 포함될 경우 "" 사용
+				- generic(sans-serif, serif와 같은 기본 폰트)인 경우 "" 사용 X
+				*/
+        /* 한글폰트/영문폰트
+				- 한글폰트의 한글이름, 영문이름을 제대로 인식 못하는 경우 대비해서 같이 작성해주는게 좋음
+				- 한글은 한글폰트로, 영문은 영문폰트로 나오길 원한다면 영문폰트, 한글폰트 순으로 적어주는게 좋음
+				*/
+      }
+
+      .pretendard-bold {
+        font-family: "Pretendard-Bold", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="black-han-sans">안녕하세요</p>
+    <p class="gugi">안녕하세요</p>
+    <p class="pretendard-regular">안녕하세요</p>
+    <p class="pretendard-bold">안녕하세요</p>
+  </body>
+</html>
