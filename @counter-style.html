@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@counter-style</title>
+    <style>
+      /* 사파리에서는 지원하지 않음 */
+      @counter-style stress {
+        system: fixed;
+        symbols: ☹️ 😠 😡 🤬 🤯;
+        suffix: " ";
+      }
+
+      li {
+        list-style: stress;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>첫번째</li>
+      <li>두번째</li>
+      <li>세번째</li>
+      <li>네번째</li>
+      <li>다섯번째</li>
+      <li>여섯번째</li>
+      <li>일곱번째</li>
+      <li>여덟번째</li>
+      <li>아홉번째</li>
+      <li>열번째</li>
+    </ol>
+  </body>
+</html>
