@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pseudo class</title>
+    <style>
+      :root {
+        --main-color: tomato;
+      }
+
+      p:first-child,
+      p:last-child {
+        color: var(--main-color);
+      }
+
+      /* 세번째 p*/
+      p:nth-of-type(3) {
+        color: royalblue;
+      }
+
+      /* p 형제 중 세번째가 없으니까 적용안됨 */
+      p:nth-child(3) {
+        text-decoration: underline salmon;
+      }
+
+      /* div 자식 요소 중 세번째 */
+      div :nth-child(3) {
+        text-decoration: underline seagreen;
+      }
+
+      /* 형제 요소 중 유일하게 사용된 div */
+      div:only-of-type {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      /* div 자식 요소이면서 형제 요소 중 유일하게 사용된 요소*/
+      div :only-of-type {
+        border: 3px solid sandybrown;
+      }
+
+      p:not(.red) {
+        text-decoration: underline gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>첫번째</p>
+      <p>두번째</p>
+      <strong>세번째</strong>
+      <p>네번째</p>
+      <div>다섯번째</div>
+      <p>여섯번째</p>
+      <p class="red">일곱번째</p>
+      <p>여덟번째</p>
+      <p class="red">아홉번째</p>
+      <p>열번째</p>
+    </div>
+  </body>
+</html>
