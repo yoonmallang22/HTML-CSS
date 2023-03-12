@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>margin collapsing</title>
+    <style>
+      body {
+        color: #fff;
+        font-size: 40px;
+      }
+
+      p {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+      }
+      .a {
+        background: salmon;
+        margin: 20px;
+      }
+      .b {
+        background: slateblue;
+        margin: 30px 20px;
+      }
+
+      div {
+        background: skyblue;
+      }
+      .c {
+        background: seagreen;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 요소와 요소의 사이에 margin-top 혹은 margin-bottom의 공간이 있을 경우 더 높은 값의 margin 값이 적용되는 현상 -->
+    <p class="a">A</p>
+    <p class="b">B</p>
+
+    <!-- 2. 부모 요소와 자식 요소가 존재하는 경우 자식 요소의 margin-top 혹은 margin-bottom 값이 부모의 높이에 영향을 미치지 않는 현상 -->
+    <div>
+      <p class="c">C</p>
+    </div>
+  </body>
+</html>
