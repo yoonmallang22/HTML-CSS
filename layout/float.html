@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float</title>
+    <style>
+      body {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      header {
+        background-color: #96c9f2;
+      }
+
+      section {
+        background-color: #485373;
+        width: 70%;
+        float: left;
+      }
+
+      aside {
+        background-color: #c7f544;
+        width: 30%;
+        float: right;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      footer {
+        background-color: #ff7769;
+      }
+
+      header,
+      footer {
+        height: 100px;
+        line-height: 100px;
+      }
+
+      section,
+      aside {
+        height: 200px;
+        line-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <div class="clearfix">
+      <section>section</section>
+      <aside>aside</aside>
+    </div>
+    <footer>footer</footer>
+  </body>
+</html>
