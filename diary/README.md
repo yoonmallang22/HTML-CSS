@@ -1,3 +1,4 @@
 - common.html,common.css 파일에 세 페이지 공통으로 들어가는 콘텐츠 정리
 - join.html은 index.html에 1. 헤더 버튼 로그인으로 바꿔주고 2. 닉네임 `input`만 넣어주면 끝!
 - 미디어쿼리로 반응형 처리
+- 로고 애니메이션
