@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
-
 body,
 h1,
 h2,
 ul,
 button,
-input {
+input,
+fieldset {
   margin: 0;
   padding: 0;
 }
@@ -16,6 +15,10 @@ li {
 
 button {
   background-color: transparent;
+  border: none;
+}
+
+fieldset {
   border: none;
 }
 
@@ -128,6 +131,9 @@ button {
 .menu li:nth-child(4n + 1) button {
   box-shadow: 0 0 0 3px #6327fe;
 }
+/* .menu li button:focus {
+  box-shadow: 0 0 0 3px #6327fe;
+} */
 
 .menu li:nth-child(2) button:after {
   content: "";
@@ -186,6 +192,7 @@ button {
 .deposit-input::placeholder {
   padding-left: 6px;
   font-weight: 500;
+  color: #bdbdbd;
 }
 
 .get {

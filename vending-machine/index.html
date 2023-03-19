@@ -6,6 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>vending machine</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,81 +22,85 @@
 		<main>
 			<div class="container">
 				<section class="order-box">
-					<ul class="menu">
-						<li>
-							<button type="button">
-								<img src="img/original_cola.png" alt="">
-								<p>Original_Cola</p>
-								<div class="price">1000원</div>
-							</button>
-						</li>
-						<li>
-							<button type="button">
-								<img src="img/violet_cola.png" alt="">
-								<p>Violet_Cola</p>
-								<div class="price">1000원</div>
-							</button>
-						</li>
-						<li>
-							<button type="button">
-								<img src="img/yellow_cola.png" alt="">
-								<p>Yellow_Cola</p>
-								<div class="price">1000원</div>
-							</button>
-						</li>
-						<li>
-							<button type="button">
-								<img src="img/cool_cola.png" alt="">
-								<p>Cool_Cola</p>
-								<div class="price">1000원</div>
-							</button>
-						</li>
-						<li>
-							<button type="button">
-								<img src="img/green_cola.png" alt="">
-								<p>Green_Cola</p>
-								<div class="price">1000원</div>
-							</button>
-						</li>
-						<li>
-							<button type="button">
-								<img src="img/orange_cola.png" alt="">
-								<p>Orange_Cola</p>
-								<div class="price">1000원</div>
-							</button>
-						</li>
-					</ul>
-
-					<form class="change">
-						<div class="balance-box">
-							잔액: <span class="balance">1,000원</span>
-						</div>
-						<button class="change-btn" type="button">거스름돈 반환</button>
-					</form>
-
-					<form class="deposit">
-						<label for="pay" class="a11y-hidden">입금액</label>
-						<input class="deposit-input" id="pay" type="number" placeholder="입금액 입력">
-						<button class="deposit-btn" type="button">입금</button>
-					</form>
-
-					<form class="get">
-						<div class="bag list-wrap">
-							<ul class="list">
-								<li class="original">
-									<div class="name">Original_Cola</div>
-									<div class="count-box">1</div>
+					<form>
+						<fieldset>
+							<ul class="menu">
+								<li>
+									<button type="button">
+										<img src="img/original_cola.png" alt="">
+										<p>Original_Cola</p>
+										<div class="price">1000원</div>
+									</button>
 								</li>
-								<li class="green">
-									<div class="name">Green_Cola</div>
-									<div class="count-box">2</div>
+								<li>
+									<button type="button">
+										<img src="img/violet_cola.png" alt="">
+										<p>Violet_Cola</p>
+										<div class="price">1000원</div>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<img src="img/yellow_cola.png" alt="">
+										<p>Yellow_Cola</p>
+										<div class="price">1000원</div>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<img src="img/cool_cola.png" alt="">
+										<p>Cool_Cola</p>
+										<div class="price">1000원</div>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<img src="img/green_cola.png" alt="">
+										<p>Green_Cola</p>
+										<div class="price">1000원</div>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<img src="img/orange_cola.png" alt="">
+										<p>Orange_Cola</p>
+										<div class="price">1000원</div>
+									</button>
 								</li>
 							</ul>
-						</div>
-						<button class="get-btn" type="button">획득</button>
-					</form>
+						</fieldset>
 
+						<fieldset class="change">
+							<div class="balance-box">
+								잔액: <span class="balance">1,000원</span>
+							</div>
+							<button class="change-btn" type="button">거스름돈 반환</button>
+						</fieldset>
+
+						<fieldset class="deposit">
+							<label for="pay" class="a11y-hidden">입금액</label>
+							<input class="deposit-input" id="pay" type="number" placeholder="입금액 입력">
+							<button class="deposit-btn" type="button">입금</button>
+						</fieldset>
+
+						<fieldset class="get">
+							<div class="bag list-wrap">
+								<ul class="list">
+									<li class="original">
+										<div class="name">Original_Cola</div>
+										<div class="count-box">1</div>
+									</li>
+									<li class="green">
+										<div class="name">Green_Cola</div>
+										<div class="count-box">2</div>
+									</li>
+								</ul>
+							</div>
+							<button class="get-btn" type="button">획득</button>
+						</fieldset>
+					</form>
 				</section>
+
 				<div class="container2">
 					<section class="money-box">
 						<div class="money-wrap">
