@@ -1,0 +1,135 @@
+@keyframes left-hi {
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes right-hi {
+  to {
+    transform: scaleX(-1) rotate(0);
+  }
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.5) 0%,
+    rgba(148, 187, 233, 0.5) 100%
+  );
+}
+
+.jigu,
+[class^="ground"],
+[class$="cheek"],
+.mouth,
+.tongue {
+  border: 3px solid #000;
+}
+
+.jigu {
+  background-color: rgb(74, 101, 251);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+[class^="ground"] {
+  background-color: rgb(87, 190, 67);
+  position: absolute;
+}
+.ground1 {
+  width: 350px;
+  height: 350px;
+  border-radius: 31% 39% 50% 31% / 58% 32% 48% 32%;
+  top: -5%;
+  left: -10%;
+}
+.ground2 {
+  width: 150px;
+  height: 250px;
+  border-radius: 51% 49% 80% 20% / 48% 31% 59% 25%;
+  top: 30%;
+  right: -10%;
+  transform: rotate(25deg);
+}
+.ground3 {
+  width: 300px;
+  height: 150px;
+  border-radius: 45% 35% 51% 49% / 73% 33% 67% 47%;
+  bottom: -18%;
+  left: 20%;
+  transform: rotate(-10deg);
+}
+
+[class$="cheek"] {
+  background-color: pink;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 45%;
+  position: absolute;
+}
+.left-cheek {
+  left: 17%;
+}
+.right-cheek {
+  right: 17%;
+}
+
+[class$="eye"] {
+  width: 30px;
+  height: 15px;
+  border-radius: 30px 30px 0 0;
+  border: 10px solid rgb(22, 21, 21);
+  border-bottom: none;
+  position: absolute;
+  top: 40%;
+}
+.left-eye {
+  left: 35%;
+}
+.right-eye {
+  right: 35%;
+}
+
+.mouth {
+  background-color: rgb(237, 59, 59);
+  width: 100px;
+  height: 60px;
+  border-radius: 10% 10% 50px 50px;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.tongue {
+  background-color: rgb(240, 137, 137);
+  width: 100px;
+  height: 50px;
+  border-radius: 45%;
+  position: absolute;
+  top: 40%;
+}
+
+[class$="hand"] {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+}
+.left-hand {
+  left: 3%;
+  transform: rotate(-20deg);
+  animation: left-hi linear 0.5s infinite alternate;
+}
+.right-hand {
+  right: 3%;
+  transform: scaleX(-1) rotate(-20deg);
+  animation: right-hi linear 0.5s infinite alternate;
+}
