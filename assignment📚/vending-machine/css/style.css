@@ -128,12 +128,12 @@ button {
   line-height: 22px;
 }
 
-.menu li:nth-child(4n + 1) button {
-  box-shadow: 0 0 0 3px #6327fe;
-}
-/* .menu li button:focus {
+/* .menu li:nth-child(4n + 1) button {
   box-shadow: 0 0 0 3px #6327fe;
 } */
+.menu li button:focus {
+  box-shadow: 0 0 0 3px #6327fe;
+}
 
 .menu li:nth-child(2) button:after {
   content: "";
@@ -186,13 +186,23 @@ button {
   width: 200px;
   height: 32px;
   box-sizing: border-box;
+  padding-left: 6px;
   border: 1px solid #bdbdbd;
   border-radius: 5px;
 }
+.deposit-input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #6327fe;
+}
 .deposit-input::placeholder {
-  padding-left: 6px;
   font-weight: 500;
   color: #bdbdbd;
+}
+.deposit-input::-webkit-outer-spin-button,
+.deposit-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .get {
@@ -315,7 +325,7 @@ button {
   background: #ffffff;
   min-height: 79px;
   border-radius: 50px;
-  border-width: 9px 4px 0 4px;
+  border-width: 9px 4px 9px 4px;
   border-style: solid;
   border-color: #eae8fe;
 }
