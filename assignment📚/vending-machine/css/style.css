@@ -84,6 +84,7 @@ header h1 img {
 
 button {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .menu {
@@ -131,11 +132,15 @@ button {
 /* .menu li:nth-child(4n + 1) button {
   box-shadow: 0 0 0 3px #6327fe;
 } */
-.menu li button:focus {
+.menu li button:not(.soldout):focus {
   box-shadow: 0 0 0 3px #6327fe;
 }
 
-.menu li:nth-child(2) button:after {
+.menu .soldout {
+  cursor: default;
+}
+
+.menu .soldout:after {
   content: "";
   display: block;
   width: 100%;
