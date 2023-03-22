@@ -66,6 +66,7 @@ p {
 .card-cover {
   box-shadow: inset 0 0 10px black;
   flex-basis: 26%;
+  flex-shrink: 0;
 }
 
 /* .card-cover img{
@@ -76,4 +77,5 @@ p {
 .card-content {
   box-shadow: inset 0 0 10px white;
   flex-grow: 1;
+  min-width: 0;
 }
