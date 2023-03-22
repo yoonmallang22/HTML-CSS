@@ -1,9 +1,20 @@
 body,
 h2,
 h3,
-p {
+p,
+ul {
   margin: initial;
   padding: initial;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
 }
 
 :root {
@@ -67,15 +78,56 @@ p {
   box-shadow: inset 0 0 10px black;
   flex-basis: 26%;
   flex-shrink: 0;
+  position: relative;
 }
 
-/* .card-cover img{
-  max-width: 100%;
+.card-cover img {
+  width: 100%;
   height: 100%;
-} */
+  object-fit: cover;
+}
+
+.card-cover h3 {
+  position: absolute;
+  background-color: rgba(103, 51, 153, 0.5);
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .card-content {
   box-shadow: inset 0 0 10px white;
   flex-grow: 1;
   min-width: 0;
+  padding: 24px;
+}
+
+.card-content h3 {
+  box-shadow: inset 0 0 10px white;
+  margin-bottom: 32px;
+}
+
+.list {
+  box-shadow: inset 0 0 10px white;
+}
+
+.list li::before {
+  content: "";
+  display: inline-block;
+  background-color: #bd8fe8;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.list li {
+  box-shadow: inset 0 0 10px red;
+  text-indent: -20px;
+  padding-left: 20px;
+}
+
+.list li ~ li {
+  margin-top: 6px;
 }
