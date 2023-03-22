@@ -1,0 +1,79 @@
+body,
+h2,
+h3,
+p {
+  margin: initial;
+  padding: initial;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.l_wrapper {
+  box-shadow: inset 0 0 10px red;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section_pink {
+  background-color: seashell;
+  color: salmon;
+}
+
+.section_purple {
+  background-color: #673399;
+  color: #fff;
+}
+
+.section-header {
+  box-shadow: inset 0 0 10px blue;
+
+  margin-bottom: 100px;
+}
+
+.section-content {
+  box-shadow: inset 0 0 10px darkcyan;
+}
+
+.title {
+  display: flex;
+}
+
+.title-heading {
+  flex-basis: 26%;
+  flex-shrink: 0;
+}
+
+.title-content {
+  max-width: 450px;
+}
+
+.card {
+  box-shadow: inset 0 0 10px darkgreen;
+  display: flex;
+}
+
+.card ~ .card {
+  margin-top: 24px;
+}
+
+.card-cover {
+  box-shadow: inset 0 0 10px black;
+  flex-basis: 26%;
+}
+
+/* .card-cover img{
+  max-width: 100%;
+  height: 100%;
+} */
+
+.card-content {
+  box-shadow: inset 0 0 10px white;
+  flex-grow: 1;
+}
