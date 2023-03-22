@@ -7,6 +7,11 @@ ul {
   padding: initial;
 }
 
+h2,
+h3 {
+  font-weight: inherit;
+}
+
 li {
   list-style: none;
 }
@@ -17,9 +22,20 @@ img {
   vertical-align: top;
 }
 
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 :root {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .l_wrapper {
@@ -43,13 +59,7 @@ img {
 }
 
 .section-header {
-  box-shadow: inset 0 0 10px blue;
-
   margin-bottom: 100px;
-}
-
-.section-content {
-  box-shadow: inset 0 0 10px darkcyan;
 }
 
 .title {
@@ -59,14 +69,34 @@ img {
 .title-heading {
   flex-basis: 26%;
   flex-shrink: 0;
+  font-size: 40px;
+}
+
+.title-heading strong {
+  font-weight: 500;
+  box-shadow: inset 0 -20px 0 orangered;
 }
 
 .title-content {
-  max-width: 450px;
+  max-width: 500px;
+  font-size: 14px;
+  color: #bd8fe8;
+  display: flex;
+  align-items: center;
+}
+
+.title-content::before {
+  content: "";
+  background-color: currentColor;
+  width: 5em;
+  height: 1px;
+  flex-shrink: 0;
+  margin-right: 1em;
 }
 
 .card {
-  box-shadow: inset 0 0 10px darkgreen;
+  background-color: #fff;
+  color: #000;
   display: flex;
 }
 
@@ -74,8 +104,11 @@ img {
   margin-top: 24px;
 }
 
+.card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
 .card-cover {
-  box-shadow: inset 0 0 10px black;
   flex-basis: 26%;
   flex-shrink: 0;
   position: relative;
@@ -94,22 +127,21 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
+  color: #fff;
 }
 
 .card-content {
-  box-shadow: inset 0 0 10px white;
   flex-grow: 1;
   min-width: 0;
   padding: 24px;
 }
 
 .card-content h3 {
-  box-shadow: inset 0 0 10px white;
   margin-bottom: 32px;
-}
-
-.list {
-  box-shadow: inset 0 0 10px white;
+  font-size: 18px;
+  font-weight: 700;
+  color: #673399;
 }
 
 .list li::before {
@@ -123,11 +155,11 @@ img {
 }
 
 .list li {
-  box-shadow: inset 0 0 10px red;
   text-indent: -20px;
   padding-left: 20px;
+  font-size: 14px;
 }
 
 .list li ~ li {
-  margin-top: 6px;
+  margin-top: 10px;
 }
