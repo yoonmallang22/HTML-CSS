@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>custom input</title>
+	<style>
+		.hide {
+			position: absolute;
+			clip: rect(0 0 0 0);
+			clip-path: inset(50%);
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		.labl-hold {
+			position: relative;
+			display: inline-block;
+			margin: 20px 0;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		.labl-hold::before {
+			content: '';
+			display: inline-block;
+			width: 22px;
+			height: 22px;
+			margin-right: 10px;
+			vertical-align: -5px;
+			border: 1px solid #000;
+		}
+
+		.labl-hold::after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 2px;
+			left: 23px;
+			width: 22px;
+			height: 22px;
+			margin-right: 10px;
+			vertical-align: -5px;
+			background: url(./img/checkmark.png) no-repeat 0 0 / contain;
+			opacity: 0;
+			transition: 0.3s ease;
+		}
+
+		.inp-hold:checked+.labl-hold::after {
+			left: 1px;
+			opacity: 1;
+		}
+
+		.inp-hold:focus-visible+.labl-hold::before {
+			outline: 2px solid #000;
+			outline-offset: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<input type="checkbox" id="login-hold" class="inp-hold hide">
+	<label for="login-hold" class="labl-hold">로그인 상태 유지</label>
+</body>
+
+</html>
