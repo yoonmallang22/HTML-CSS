@@ -22,6 +22,11 @@ img {
   vertical-align: top;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -49,46 +54,93 @@ img {
 
 .section_seashell {
   background-color: seashell;
-  color: salmon;
-}
-
-.section-header {
-  box-shadow: inset 0 0 10px blue;
 }
 
 .section_seashell .title-heading {
   flex-basis: calc((100% - 48px) / 3);
+  color: salmon;
 }
 
 .title button {
-  flex-shrink: 0;
+  background-color: orangered;
+  color: #fff;
   margin: auto 0 auto auto;
-}
-
-.section-content {
-  box-shadow: inset 0 0 10px black;
+  padding: 15px 25px;
+  border-radius: 7px;
+  border-bottom: 4px solid #ba2800;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .content {
   display: flex;
   gap: 24px;
-}
-
-article {
-  box-shadow: inset 0 0 10px purple;
+  position: relative;
 }
 
 .section_seashell .card {
   flex-grow: 1;
+  flex-basis: 344px;
+  display: flex;
+  flex-direction: column;
+}
+
+.soldout::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/badge.png) no-repeat;
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  z-index: 10;
 }
 
 .card-content {
-  box-shadow: inset 0 0 10px blue;
+  flex-grow: 1;
+}
+
+.card-content span {
+  background-color: #f1e0f8;
+  color: #673399;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.section_seashell .card-content h3 {
+  min-height: 58px;
+  margin-top: 24px;
+  font-size: 24px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #767676;
 }
 
 .card-info {
-  box-shadow: inset 0 0 10px orangered;
-  padding: 19px 24px;
+  height: 30px;
+  padding: 19px 24px 19px 0;
+  margin-left: 24px;
+  border-top: 3px solid #eee;
+  font-size: 12px;
+  color: #767676;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-info img {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.card-info img ~ img {
+  margin-left: -15px;
 }
 
 .section_purple {
@@ -152,7 +204,7 @@ article {
   margin-top: 24px;
 }
 
-.section_purple .card:nth-child(odd) {
+.section_purple .card:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
@@ -187,8 +239,11 @@ article {
 
 .card-content h3 {
   margin-bottom: 32px;
-  font-size: 18px;
   font-weight: 700;
+}
+
+.section_purple .card-content h3 {
+  font-size: 18px;
   color: #673399;
 }
 
