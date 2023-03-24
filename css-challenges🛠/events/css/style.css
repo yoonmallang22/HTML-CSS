@@ -44,7 +44,6 @@ button {
 }
 
 .l_wrapper {
-  box-shadow: inset 0 0 10px red;
   margin: 0 20px;
 }
 
@@ -59,6 +58,7 @@ button {
 .section_seashell .title-heading {
   flex-basis: calc((100% - 48px) / 3);
   color: salmon;
+  min-width: 344px;
 }
 
 .title button {
@@ -75,7 +75,6 @@ button {
 .content {
   display: flex;
   gap: 24px;
-  position: relative;
 }
 
 .section_seashell .card {
@@ -83,6 +82,7 @@ button {
   flex-basis: 344px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .soldout::before {
@@ -105,7 +105,7 @@ button {
   background-color: #f1e0f8;
   color: #673399;
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 4px 7px;
   border-radius: 4px;
 }
 
@@ -208,7 +208,7 @@ button {
   flex-direction: row-reverse;
 }
 
-.card-cover {
+.section_purple .card-cover {
   flex-basis: 26%;
   flex-shrink: 0;
   position: relative;
@@ -274,19 +274,35 @@ button {
   }
 }
 
+@media (max-width: 928px) and (min-width: 769px) {
+  .section_seashell .card-content h3 {
+    min-height: 87px;
+  }
+}
+
 @media (max-width: 768px) {
   .title {
     flex-direction: column;
     gap: 30px;
   }
+
   .title-heading {
-    width: 260px;
+    max-width: 344px;
   }
+
   .title-content::before {
     display: none;
   }
-  .card,
-  .card:nth-child(odd) {
+  .section_purple .card,
+  .section_purple .card:nth-of-type(even) {
     flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .section_seashell .card-content h3 {
+    min-height: auto;
   }
 }
