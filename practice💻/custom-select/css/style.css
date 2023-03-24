@@ -57,6 +57,8 @@ button {
   border: 1px solid #c4c4c4;
   border-radius: 10px;
   box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+  /* 펼쳐졌을 때 뒤의 콘텐츠를 밀어내어 레이아웃을 깨지 않게 하기 위해서
+	position: absolute;로 떠있게 한다 */
   position: absolute;
   top: 49px;
   left: 0;
