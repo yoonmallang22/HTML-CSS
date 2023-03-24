@@ -47,9 +47,48 @@ img {
   padding: 100px 0;
 }
 
-.section_pink {
+.section_seashell {
   background-color: seashell;
   color: salmon;
+}
+
+.section-header {
+  box-shadow: inset 0 0 10px blue;
+}
+
+.section_seashell .title-heading {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.title button {
+  flex-shrink: 0;
+  margin: auto 0 auto auto;
+}
+
+.section-content {
+  box-shadow: inset 0 0 10px black;
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+}
+
+article {
+  box-shadow: inset 0 0 10px purple;
+}
+
+.section_seashell .card {
+  flex-grow: 1;
+}
+
+.card-content {
+  box-shadow: inset 0 0 10px blue;
+}
+
+.card-info {
+  box-shadow: inset 0 0 10px orangered;
+  padding: 19px 24px;
 }
 
 .section_purple {
@@ -66,6 +105,11 @@ img {
 }
 
 .title-heading {
+  flex-shrink: 0;
+  font-size: 40px;
+}
+
+.section_purple .title-heading {
   flex-basis: 26%;
   flex-shrink: 0;
   font-size: 40px;
@@ -97,15 +141,18 @@ img {
 .card {
   background-color: #fff;
   color: #000;
+}
+
+.section_purple .card {
   display: flex;
   min-height: 200px;
 }
 
-.card ~ .card {
+.section_purple .card ~ .card {
   margin-top: 24px;
 }
 
-.card:nth-child(odd) {
+.section_purple .card:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
