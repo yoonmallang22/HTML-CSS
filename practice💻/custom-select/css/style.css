@@ -1,0 +1,84 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+.custom-select {
+  width: 200px;
+  position: relative;
+}
+
+.custom-select > button {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  padding: 0 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.custom-select > button:focus {
+  outline: none;
+  border-color: #9b51e8;
+  box-shadow: 0 0 0 3px #f8e4ff;
+}
+
+.custom-select > button::after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: url(../img/select.svg) no-repeat center / contain;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -0.5em;
+  transform: rotate(-180deg);
+  transition: 0.3s;
+}
+
+.custom-select ul {
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 8px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 49px;
+  left: 0;
+}
+
+.custom-select ul li button {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.custom-select ul li button:hover {
+  background-color: #f8e4ff;
+}
+
+/* active */
+.custom-select.active > button::after {
+  transform: rotate(0deg);
+}
+
+.custom-select.active ul {
+  display: none;
+}
