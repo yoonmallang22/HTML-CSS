@@ -216,7 +216,8 @@ body {
   height: 22px;
   margin-right: 8px;
   vertical-align: -5px;
-  background-image: url(../img/check-box.svg);
+  /* background: url(../img/css_sprites_checkbox.png) -52px -10px; */
+  background: url(../img/css_sprites_retina.png) -52px -10px / 84px 42px;
 }
 
 .form-login .inp-hold:focus-visible + .labl-hold::before {
@@ -225,7 +226,9 @@ body {
 }
 
 .form-login .inp-hold:checked + .labl-hold::before {
-  background-image: url(../img/check-box-checked.svg);
+  /* background: url(../img/css_sprites_checkbox.png) -10px -10px; */
+  background: url(../img/css_sprites_retina.png) -10px -10px / 84px 42px;
+
 }
 
 /* .form-login .inp-hold {
@@ -323,24 +326,31 @@ body {
   content: "";
   width: 22px;
   height: 22px;
-  background: no-repeat center;
+	/* background-image: url(../img/css_sprites_sns.png); */
+	background-image: url(../img/css_sprites_sns_retina.png);
+	background-repeat: no-repeat;
+	background-size: 32px 129px;
 }
 
 .icon-google::before {
-  background-image: url(../img/google.svg);
+  /* background-position: -10px -10px; */
+  background-position: -5px -36px;
 }
 
 .icon-facebook::before {
   height: 24px;
-  background-image: url(../img/facebook.svg);
+  /* background-position: -6px -136px; */
+  background-position: -2px -100px;
 }
 
 .icon-naver::before {
-  background-image: url(../img/naver.svg);
+  /* background-position: -10px -52px; */
+  background-position: -5px -68px;
 }
 
 .icon-kakao::before {
-  background-image: url(../img/kakao.svg);
+  /* background-position: -10px -94px; */
+  background-position: -5px -5px;
 }
 
 /* 닫기 버튼 */
